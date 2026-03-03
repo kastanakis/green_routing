@@ -45,9 +45,10 @@ def plot_total_cone_co2_vs_size(as2cone, as2co2, include_self=False, log_scale=F
     # Fit linear regression in log-log space
     m, b = np.polyfit(log_x, log_y, 1)
     plt.plot(x, 10**(m * log_x + b), color='red', linewidth=2, label=f"Trend: y ∝ x^{m:.2f}")
-    plt.xlabel("Customer Cone Size", fontsize=14)
-    plt.ylabel("Total CO₂ Intensity in Cone (kg CO₂)", fontsize=14)
-
+    plt.xlabel("Customer Cone Size", fontsize=18)
+    plt.ylabel("Total CO₂ Intensity in Cone (kg CO₂)", fontsize=18)
+    plt.xticks(fontsize=16)
+    plt.yticks(fontsize=16)
     if log_scale:
         plt.xscale('log')
         plt.yscale('log')

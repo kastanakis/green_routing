@@ -27,8 +27,10 @@ plt.figure(figsize=(10, 6))
 sns.violinplot(x='Group', y='CO2 Intensity', data=df_pop,
                inner='box', scale='width', cut=0, linewidth=1.1)
 
-plt.xlabel("AS Popularity Group", fontsize=14)
-plt.ylabel("CO₂ Intensity", fontsize=14)
+plt.xlabel("AS Popularity Group", fontsize=18)
+plt.ylabel("CO₂ Intensity", fontsize=18)
+plt.xticks(fontsize=16)
+plt.yticks(fontsize=16)
 plt.grid(axis='y', linestyle='--', alpha=0.5)
 plt.tight_layout()
 plt.savefig("output/co2_violin_popularity_groups.png", dpi=300)
